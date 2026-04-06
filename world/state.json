@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "name": "New Eden",
+    "tick": 330,
+    "worldMinutes": 330,
+    "worldDays": 0,
+    "hour": 5,
+    "minute": 30,
+    "time": "dawn",
+    "season": "spring"
+  },
+  "zones": {
+    "landing_site": {
+      "id": "landing_site",
+      "name": "Landing Site",
+      "description": "A scorched clearing where the shuttle touched down. Supply crates are scattered around the wreckage. The ground is flat and firm — a natural starting point.",
+      "biome": "grassland",
+      "adjacent": [
+        "forest_edge",
+        "open_meadow",
+        "beach",
+        "river_bank"
+      ],
+      "objects": [
+        "supply_crate_1",
+        "supply_crate_2",
+        "shuttle_wreckage"
+      ],
+      "structures": [],
+      "agents": [
+        "alice",
+        "bob"
+      ],
+      "elevation": 0.3,
+      "color": "#7cb342"
+    },
+    "forest_edge": {
+      "id": "forest_edge",
+      "name": "Forest Edge",
+      "description": "Where grassland yields to tall oaks and birches. Berry bushes grow along the treeline. A well-worn animal trail leads deeper into the woods.",
+      "biome": "forest",
+      "adjacent": [
+        "landing_site",
+        "dense_forest",
+        "river_bank",
+        "open_meadow"
+      ],
+      "objects": [
+        "berry_bush",
+        "tree_stump"
+      ],
+      "structures": [],
+      "agents": [],
+      "elevation": 0.4,
+      "color": "#558b2f"
+    },
+    "dense_forest": {
+      "id": "dense_forest",
+      "name": "Dense Forest",
+      "description": "Ancient trees form a thick canopy overhead. Mushrooms cluster at the base of massive trunks. The air is cool and damp. Strange sounds echo from deeper within.",
+      "biome": "forest",
+      "adjacent": [
+        "forest_edge",
+        "rocky_highlands",
+        "stone_quarry"
+      ],
+      "objects": [
+        "ancient_tree_1",
+        "ancient_tree_2",
+        "mushroom_cluster",
+        "fallen_log"
+      ],
+      "structures": [],
+      "agents": [],
+      "elevation": 0.55,
+      "color": "#33691e"
+    },
+    "river_bank": {
+      "id": "river_bank",
+      "name": "River Bank",
+      "description": "A gentle river curves through mossy banks. Smooth stones line the shore. Reeds sway in the current. Fish dart beneath the surface.",
+      "biome": "wetland",
+      "adjacent": [
+        "landing_site",
+        "forest_edge",
+        "lake_shore"
+      ],
+      "objects": [
+        "smooth_stones",
+        "reeds",
+        "fishing_spot"
+      ],
+      "structures": [],
+      "agents": [],
+      "elevation": 0.2,
+      "color": "#66bb6a"
+    },
+    "open_meadow": {
+      "id": "open_meadow",
+      "name": "Open Meadow",
+      "description": "Rolling fields of tall grass and wildflowers stretch to the horizon. The soil here is dark and fertile. Wind ripples through the grass in waves.",
+      "biome": "meadow",
+      "adjacent": [
+        "landing_site",
+        "forest_edge",
+        "stone_quarry"
+      ],
+      "objects": [
+        "wildflowers",
+        "tall_grass",
+        "fertile_soil_patch"
+      ],
+      "structures": [],
+      "agents": [],
+      "elevation": 0.35,
+      "color": "#9ccc65"
+    },
+    "rocky_highlands": {
+      "id": "rocky_highlands",
+      "name": "Rocky Highlands",
+      "description": "Windswept ridges of exposed stone rise above the treeline. Ore veins glint in the cliff faces. From the lookout point, the entire island is visible.",
+      "biome": "rocky",
+      "adjacent": [
+        "dense_forest",
+        "stone_quarry"
+      ],
+      "objects": [
+        "ore_vein",
+        "cliff_lookout",
+        "scrub_bush"
+      ],
+      "structures": [],
+      "agents": [],
+      "elevation": 0.9,
+      "color": "#8d6e63"
+    },
+    "stone_quarry": {
+      "id": "stone_quarry",
+      "name": "Stone Quarry",
+      "description": "A natural depression where layers of sandstone and limestone are exposed. Loose rocks litter the ground. Good building material everywhere.",
+      "biome": "rocky",
+      "adjacent": [
+        "rocky_highlands",
+        "dense_forest",
+        "open_meadow"
+      ],
+      "objects": [
+        "sandstone_deposit",
+        "limestone_outcrop",
+        "loose_rocks"
+      ],
+      "structures": [],
+      "agents": [],
+      "elevation": 0.6,
+      "color": "#a1887f"
+    },
+    "beach": {
+      "id": "beach",
+      "name": "Beach",
+      "description": "Warm sand meets turquoise shallows. Driftwood collects along the tideline. Shells and small crabs dot the shore. The ocean stretches endlessly.",
+      "biome": "beach",
+      "adjacent": [
+        "landing_site",
+        "lake_shore"
+      ],
+      "objects": [
+        "driftwood",
+        "shells",
+        "tidal_pool"
+      ],
+      "structures": [],
+      "agents": [],
+      "elevation": 0.05,
+      "color": "#f0e68c"
+    },
+    "lake_shore": {
+      "id": "lake_shore",
+      "name": "Lake Shore",
+      "description": "A tranquil freshwater lake fed by the river. Lily pads float on the surface. Clay deposits line the banks. Fish leap at dawn and dusk.",
+      "biome": "wetland",
+      "adjacent": [
+        "river_bank",
+        "beach"
+      ],
+      "objects": [
+        "lily_pads",
+        "clay_deposit",
+        "fish_school"
+      ],
+      "structures": [],
+      "agents": [],
+      "elevation": 0.1,
+      "color": "#81c784"
+    }
+  }
+}

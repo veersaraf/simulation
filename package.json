@@ -1,0 +1,30 @@
+{
+  "name": "veersim",
+  "version": "1.0.0",
+  "description": "AI Civilization Simulation",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run dev:all",
+    "dev:all": "concurrently -n server,client -c cyan,magenta \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "tsx watch server.ts",
+    "dev:client": "npm --prefix client run dev",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "fs-extra": "^11.3.4",
+    "openai": "^6.33.0",
+    "ws": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "@types/ws": "^8.18.1",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}

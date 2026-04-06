@@ -1,0 +1,42 @@
+{
+  "unlocked": [],
+  "available": [
+    {
+      "id": "basic_tools",
+      "name": "Basic Tools",
+      "description": "Craft simple tools from stone and wood",
+      "requirements": {
+        "actions_completed": { "chop_wood": 3, "gather_stones": 3 }
+      },
+      "unlocks_actions": ["craft_axe", "craft_pickaxe"]
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "description": "Systematic farming and crop rotation",
+      "requirements": {
+        "actions_completed": { "plant_crop": 2, "harvest_crop": 1 }
+      },
+      "unlocks_actions": ["build_farm", "irrigate"]
+    },
+    {
+      "id": "masonry",
+      "name": "Masonry",
+      "description": "Advanced stone construction techniques",
+      "requirements": {
+        "structures_built": { "wall_section": 3 }
+      },
+      "unlocks_actions": ["build_house", "build_tower"]
+    },
+    {
+      "id": "woodworking",
+      "name": "Woodworking",
+      "description": "Process wood into planks and beams",
+      "requirements": {
+        "structures_built": { "shelter": 1 },
+        "actions_completed": { "chop_wood": 5 }
+      },
+      "unlocks_actions": ["build_sawmill", "craft_furniture"]
+    }
+  ]
+}

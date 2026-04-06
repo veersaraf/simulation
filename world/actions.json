@@ -1,0 +1,164 @@
+{
+  "actions": {
+    "move": {
+      "description": "Walk to an adjacent zone",
+      "requirements": {
+        "activity": "active",
+        "target_type": "zone",
+        "target_must_be_adjacent": true
+      },
+      "duration": 1,
+      "effects": {
+        "moves_agent_to": "target"
+      }
+    },
+    "chop_wood": {
+      "description": "Chop a tree to produce logs",
+      "requirements": {
+        "activity": "active",
+        "zone_has_object_type": "tree",
+        "tool": null
+      },
+      "duration": 2,
+      "effects": {
+        "removes_object": "target",
+        "adds_to_inventory": { "item": "logs", "quantity": 2 },
+        "adds_to_zone": { "object": "tree_stump" }
+      }
+    },
+    "gather_fruit": {
+      "description": "Gather berries or fruit from a bush",
+      "requirements": {
+        "activity": "active",
+        "zone_has_object_type": "berry_bush"
+      },
+      "duration": 1,
+      "effects": {
+        "adds_to_inventory": { "item": "berries", "quantity": 3 }
+      }
+    },
+    "gather_stones": {
+      "description": "Collect loose stones or rocks",
+      "requirements": {
+        "activity": "active",
+        "zone_has_object_type": "stones"
+      },
+      "duration": 1,
+      "effects": {
+        "adds_to_inventory": { "item": "stones", "quantity": 4 }
+      }
+    },
+    "gather_clay": {
+      "description": "Dig clay from a clay deposit",
+      "requirements": {
+        "activity": "active",
+        "zone_has_object": "clay_deposit"
+      },
+      "duration": 1,
+      "effects": {
+        "adds_to_inventory": { "item": "clay", "quantity": 3 }
+      }
+    },
+    "fish": {
+      "description": "Catch fish from a water zone",
+      "requirements": {
+        "activity": "active",
+        "zone_has_object_type": "fishing_spot"
+      },
+      "duration": 2,
+      "effects": {
+        "adds_to_inventory": { "item": "fish", "quantity": 1 }
+      }
+    },
+    "eat": {
+      "description": "Eat food from inventory to restore energy",
+      "requirements": {
+        "activity": "active",
+        "inventory_has": ["berries", "fish", "bread"]
+      },
+      "duration": 1,
+      "effects": {
+        "removes_from_inventory": { "item": "target_food", "quantity": 1 },
+        "restores_energy": 25
+      }
+    },
+    "build_campfire": {
+      "description": "Build a campfire for warmth and cooking",
+      "requirements": {
+        "activity": "active",
+        "inventory_has_all": [
+          { "item": "logs", "quantity": 2 },
+          { "item": "stones", "quantity": 2 }
+        ]
+      },
+      "duration": 2,
+      "effects": {
+        "removes_from_inventory": [
+          { "item": "logs", "quantity": 2 },
+          { "item": "stones", "quantity": 2 }
+        ],
+        "adds_structure": "campfire"
+      }
+    },
+    "build_shelter": {
+      "description": "Build a basic shelter for rest and protection",
+      "requirements": {
+        "activity": "active",
+        "inventory_has_all": [
+          { "item": "logs", "quantity": 4 },
+          { "item": "stones", "quantity": 2 }
+        ]
+      },
+      "duration": 4,
+      "effects": {
+        "removes_from_inventory": [
+          { "item": "logs", "quantity": 4 },
+          { "item": "stones", "quantity": 2 }
+        ],
+        "adds_structure": "shelter"
+      }
+    },
+    "build_wall": {
+      "description": "Build a stone wall section for defense or settlement boundary",
+      "requirements": {
+        "activity": "active",
+        "inventory_has_all": [
+          { "item": "stones", "quantity": 6 }
+        ]
+      },
+      "duration": 3,
+      "effects": {
+        "removes_from_inventory": [
+          { "item": "stones", "quantity": 6 }
+        ],
+        "adds_structure": "wall_section"
+      }
+    },
+    "plant_crop": {
+      "description": "Plant seeds in fertile soil to grow food",
+      "requirements": {
+        "activity": "active",
+        "zone_has_object": "fertile_soil_patch",
+        "inventory_has": ["berries"]
+      },
+      "duration": 2,
+      "effects": {
+        "removes_from_inventory": { "item": "berries", "quantity": 1 },
+        "adds_to_zone": { "object": "planted_crop_stage_1" }
+      }
+    },
+    "harvest_crop": {
+      "description": "Harvest a mature crop",
+      "requirements": {
+        "activity": "active",
+        "zone_has_object": "mature_crop"
+      },
+      "duration": 1,
+      "effects": {
+        "removes_object": "mature_crop",
+        "adds_to_inventory": { "item": "wheat", "quantity": 3 },
+        "adds_to_zone": { "object": "fertile_soil_patch" }
+      }
+    }
+  }
+}

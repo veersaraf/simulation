@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+client/node_modules/
+
+# Build output
+dist/
+client/dist/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Logs
+*.log
+/tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Vite cache
+client/.vite/
